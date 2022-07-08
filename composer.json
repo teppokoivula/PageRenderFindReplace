@@ -1,0 +1,22 @@
+{
+    "name": "teppokoivula/page-render-find-replace",
+    "type": "pw-module",
+    "description": "Page Render Find/Replace is a ProcessWire CMS/CMF module that applies replacements specified via TextformatterFindReplace to rendered page content.",
+    "keywords": [
+        "module",
+        "processwire"
+    ],
+    "homepage": "https://github.com/teppokoivula/PageRenderFindReplace",
+    "license": "MPL-2.0",
+    "authors": [
+        {
+            "name": "Teppo Koivula",
+            "homepage": "https://github.com/teppokoivula",
+            "email": "teppo.koivula@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "wireframe-framework/processwire-composer-installer": "^1.0.0"
+    }
+}
