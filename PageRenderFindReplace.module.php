@@ -19,7 +19,7 @@ class PageRenderFindReplace extends WireData implements Module, ConfigurableModu
 	public static function getModuleInfo() {
 		return [
 			'title' => 'Page Render Find/Replace',
-			'version' => '0.0.2',
+			'version' => '0.0.3',
 			'summary' => 'Apply find/replace patterns to rendered page content.',
 			'requires' => 'PHP>=7.1, ProcessWire>=3.0.164, TextformatterFindReplace',
 			'autoload' => true,
@@ -53,10 +53,10 @@ class PageRenderFindReplace extends WireData implements Module, ConfigurableModu
 	}
 
 	protected function ___isLoggingEnabled(): bool {
-		if ($this->enable_logging == null) return false;
 		if ($this->enable_logging == 'everyone') return true;
 		if ($this->enable_logging == 'superusers' && $this->user->isSuperuser()) return true;
 		if ($this->enable_logging == 'authenticated' && $this->user->isLoggedin()) return true;
+		return false;
 	}
 
 	protected function ___addLogRow(Page $page) {
